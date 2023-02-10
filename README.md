@@ -3,11 +3,16 @@ CDCEL (Coup de Coeur en Librairie) est une plateforme permetant de mettre des co
 
 # 🏗️ /🚧\ In development /🚧\
 
-## ENV
+## BACKEND ENV
 ```conf
 PORT=5000
 CLIENT_URL=http://localhost:3000
 SENTRY_DNS= //Sentry DNS
 DB= //Mongodb URI
 TOKEN_SECRET= //JWT secret token
+```
+
+## CLIENT ENV
+```conf
+REACT_APP_API_URL=API URL (http://localhost:5000/)
 ```

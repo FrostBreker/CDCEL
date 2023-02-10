@@ -1,12 +1,11 @@
 const jwt = require('jsonwebtoken');
-const UserModel = require('../models/user.model');
 
 module.exports.checkIsAuth = (req, res, next) => {
 	const token = req.cookies.jwt;
 	if (token) {
 		jwt.verify(token, process.env.TOKEN_SECRET, async (err, decodedToken) => {
 			if (err) {
-				res.sendStatus(403).json({error: 'Invalid signature'});
+				res.status(403).json({error: 'Invalid signature'});
 			} else {
 				console.log(decodedToken.id);
 				next();
@@ -24,11 +23,8 @@ module.exports.checkIsAuth = (req, res, next) => {
 module.exports.getId = (token) => {
 	if (token) {
 		return jwt.verify(token, process.env.TOKEN_SECRET, (err, decodedToken) => {
-			if (err) {
-				return null;
-			} else {
-				return decodedToken.id;
-			}
+			if (decodedToken.id) return decodedToken.id;
+			else if (err) return null;
 		});
 	} else {
 		return null;

@@ -1,6 +1,7 @@
 const UserModel = require('../models/user.model');
 const {getId} = require('../middlewares/auth.middleware');
 
+// This function return a user object from the database given a user id
 module.exports.getUser = async (req, res) => {
 	try {
 		const _id = getId(req.cookies.jwt);

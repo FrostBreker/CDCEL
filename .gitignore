@@ -2,3 +2,7 @@
 /config/.env
 /.txt
 .txt
+
+/client/node_modules
+/client/build
+/client/.env

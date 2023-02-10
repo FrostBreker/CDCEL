@@ -90,20 +90,17 @@ process.on('exit', (code) => {
 process.on('uncaughtException', (err, origin) => {
 	console.log(
 		`${new Date(Date.now())
-			.toLocaleString('fr-FR', {
-				timeZone: 'Europe/Paris',
-			})
+			.toLocaleString('fr-FR', {timeZone: 'Europe/Paris'})
 			.toString()} --> [uncaughtException] ${err}\n------------------------------------------\n${origin}\n------------------------------------------`,
 	);
 });
 process.on('unhandledRejection', (reason, promise) => {
 	console.log(
 		`${new Date(Date.now())
-			.toLocaleString('fr-FR', {
-				timeZone: 'Europe/Paris',
-			})
+			.toLocaleString('fr-FR', {timeZone: 'Europe/Paris'})
 			.toString()} --> [UNHANDLED_REJECTION] ${reason}\n------------------------------------------\n${promise}\n------------------------------------------`,
 	);
+	console.log(promise);
 });
 process.on('warning', (...args) => {
 	console.log(

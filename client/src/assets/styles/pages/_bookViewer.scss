@@ -1,0 +1,168 @@
+.book-viewer {
+	.book-card {
+		margin-left: auto;
+		margin-right: auto;
+		padding: 20px;
+		justify-content: center;
+		width: 60%;
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+
+		header {
+			display: flex;
+			.left-side {
+				img {
+					width: 300px;
+				}
+			}
+
+			.right-side {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				height: 300px;
+				margin-left: 20px;
+				.book-title {
+					font-size: 30px;
+					font-weight: 600;
+					margin-bottom: 30px;
+				}
+				.book-author {
+					font-size: 26px;
+					font-weight: bolder;
+					margin-bottom: 30px;
+				}
+				.book-description {
+					span {
+						font-size: 26px;
+						font-weight: bolder;
+						margin-bottom: 30px;
+					}
+					font-size: 16px;
+					font-weight: 300;
+					width: 600px;
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+
+	h2 {
+		font-size: 30px;
+		font-weight: 600;
+		margin-bottom: 30px;
+		margin-top: 20px;
+		text-align: center;
+	}
+	.cdc-lists {
+		margin-top: 20px;
+		width: 60%;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		.cdc-card {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			display: flex;
+			background-color: var(--color-4);
+			min-width: 300px;
+			max-width: 600px;
+			border-radius: 10px;
+			color: white;
+			min-height: 300px;
+			margin: 10px;
+			padding: 20px;
+
+			p {
+				font-size: 17px;
+				// margin-top: 10px;
+			}
+
+			.cdc-card-footer {
+				display: flex;
+				text-align: center;
+				margin-top: auto;
+
+				p {
+					font-size: 16px;
+					font-weight: 300;
+					margin-bottom: 30px;
+					margin-top: 10px;
+					margin-left: 20px;
+				}
+			}
+
+			.add-cdc {
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				display: flex;
+				background-color: var(--color-4);
+				width: 300px;
+				border-radius: 10px;
+
+				h3 {
+					font-size: 20px;
+					font-weight: 600;
+					margin-bottom: 30px;
+					margin-top: 10px;
+					color: white;
+				}
+
+				textarea,
+				input {
+					min-width: 250px;
+					max-width: 250px;
+					min-height: 40px;
+					border-radius: 10px;
+					border: 1px solid #000;
+					padding: 10px;
+					margin-bottom: 20px;
+				}
+
+				button {
+					min-width: 250px;
+					max-width: 250px;
+					min-height: 40px;
+					border-radius: 10px;
+					padding: 10px;
+					color: white;
+					font-weight: bolder;
+					font-size: 20px;
+					cursor: pointer;
+					background-color: var(--color-2);
+					transition: .1s;
+					&:hover {
+						background-color: var(--color-3);
+					}
+				}
+			}
+
+			.button-list {
+				justify-content: space-around;
+				button {
+					width: 150px;
+					height: 40px;
+					margin-left: 5px;
+					margin-right: 5px;
+					border-radius: 10px;
+					padding: 10px;
+					color: white;
+					font-weight: bolder;
+					font-size: 20px;
+					cursor: pointer;
+					background-color: var(--color-2);
+					transition: .1s;
+					&:hover {
+						background-color: var(--color-3);
+					}
+				}
+			}
+		}
+	}
+}

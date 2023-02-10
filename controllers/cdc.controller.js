@@ -10,13 +10,14 @@ module.exports.getCDCs = async (req, res) => {
 	try {
 		const bookISBN13 = req.params.isbn;
 		const _id = getId(req.cookies.jwt);
+
 		const CDCs = await CDCModel.find({
 			ISBN13: bookISBN13,
 			userId: _id,
 		});
-		res.status(200).send(CDCs);
+		await res.status(200).send(CDCs);
 	} catch (error) {
-		res.status(500).json({message: error.message});
+		await res.status(500).json({message: error.message});
 	}
 };
 
